@@ -42,23 +42,27 @@
             </thead>
             <tbody> 
                 <tr *ngFor="let product of filteredProducts">
-                  <td>
+                    <td>
                         <img *ngIf="showImage"
                             [src]="product.imageUrl" 
                             [title]="product.productName"
                             [style.width.px]="imageWidth"
                             [style.margin.px]="imageMargin"
                         />
-                  </td>
-                  <td>{{product.productName}}</td>
-                  <td>{{product.productCode | lowercase | convertToSpaces:"-"}}</td>  
-                  <td>{{product.releaseDate}}</td>
-                  <td>{{product.price | currency:'BRL':'symbol':'1.2-2'}}</td>
-                  <td>
-                      <pm-star [rating]="product.starRating"
-                        (notify)="onNotify($event)">
+                    </td>
+                    <td> 
+                        <a [routerLink]="['/products', product.productId]">
+                            {{product.productName}}
+                        </a>    
+                    </td>
+                    <td>{{product.productCode | lowercase | convertToSpaces:"-"}}</td>  
+                    <td>{{product.releaseDate}}</td>
+                    <td>{{product.price | currency:'BRL':'symbol':'1.2-2'}}</td>
+                    <td>
+                        <pm-star [rating]="product.starRating"
+                            (notify)="onNotify($event)">
 
-                      </pm-star>
+                        </pm-star>
                     </td>
                 </tr>
             </tbody>
