@@ -4,7 +4,6 @@ import { FakeApiService } from "./fakeapi.service";
 import { IFakeapiPosts } from "./fakeapiPosts";
 
 @Component({
-    selector: "pm-fakeapi",
     templateUrl: "./fakeapi.component.html",
     styleUrls: ["./fakeapi.component.css"]
 })
