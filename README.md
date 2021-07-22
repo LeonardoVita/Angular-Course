@@ -1,6 +1,6 @@
 # Angular-Course
 
-### PluralSight curse for Collections in C#
+### PluralSight cuorse for Getting Started with Angular
 
 - What is a components, directives and pipes
 - Data Bindins with (properties binding, event binding, interpolation and two-way data binding)
