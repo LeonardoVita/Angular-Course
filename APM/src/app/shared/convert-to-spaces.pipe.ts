@@ -5,6 +5,6 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class ConverToSpacesPipe implements PipeTransform{
     transform(value: string, caracter: string, replace: string): string {
-        return value.split(caracter).join(replace);
+        return value?.split(caracter).join(replace);
     }
 }

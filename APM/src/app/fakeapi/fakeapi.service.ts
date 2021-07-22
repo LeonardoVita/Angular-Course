@@ -2,18 +2,18 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 
-import { IFakeapiPosts } from "./fakeapiPosts";
+import { IFakeapiAirlines } from "./fakeapiAirlines";
 
 @Injectable({
     providedIn: "root"
 })
 export class FakeApiService {
 
-    private fakeApiUrl = "http://fakeapi.jsonparseronline.com"
+    private fakeApiUrl = "https://api.instantwebtools.net/v1"
 
     constructor(private http: HttpClient) {}
 
-    getFakeApiPosts(): Observable<IFakeapiPosts[]>{
-        return this.http.get<IFakeapiPosts[]>(`${this.fakeApiUrl}/posts`)
+    getFakeApiPosts(): Observable<IFakeapiAirlines[]>{
+        return this.http.get<IFakeapiAirlines[]>(`${this.fakeApiUrl}/airlines`)
     }
 }
